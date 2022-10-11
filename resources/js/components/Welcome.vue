@@ -14,7 +14,7 @@ export default {
 
         save() {
             console.log('hi');
-            axios.post('/users/store', {
+            axios.post('/users', {
                 id: this.id,
                 name: this.name,
                 mobile: this.mobile,
@@ -46,7 +46,7 @@ export default {
                 <h4 class="card-title">User Form</h4>
             </div>
             <div class="card-body">
-                <form class="form form-horizontal">
+                <div class="form form-horizontal">
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-1 row">
@@ -94,7 +94,7 @@ export default {
                             <button  class="btn btn-outline-secondary waves-effect" @click="reset()">Reset</button>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

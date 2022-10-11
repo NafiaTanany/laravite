@@ -24,7 +24,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('welcome');
     }
 
     /**
@@ -35,14 +35,13 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
-//        $request->validate([
-//            'id' => 'nullable|exists:users,id',
-//            'name' => 'required',
-//            'email' => 'required',
-//            'mobile' => 'required',
-//
-//        ]);
+        $request->validate([
+            'id' => 'nullable|exists:users,id',
+            'name' => 'required',
+            'email' => 'required',
+            'mobile' => 'required',
+
+        ]);
 
         $user = new User();
         if($request->id) {
@@ -50,7 +49,7 @@ class UsersController extends Controller
         }
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = bcrypt($request->password);
         $user->mobile = $request->mobile;
         $user->save();
         $message = 'تمت العملية بنجاح';
