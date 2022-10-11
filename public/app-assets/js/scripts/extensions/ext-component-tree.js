@@ -1,5 +1,5 @@
 /*=========================================================================================
-	File Name: ext-component-tree.js
+	File Name: ext-components-tree.js
 	Description: Tree
 	----------------------------------------------------------------------------------------
 	Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template

@@ -1,5 +1,5 @@
 /*=========================================================================================
-	File Name: ext-component-ratings.js
+	File Name: ext-components-ratings.js
 	Description: Ratings Commnent
 	----------------------------------------------------------------------------------------
 	Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template

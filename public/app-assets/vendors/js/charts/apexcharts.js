@@ -25829,13 +25829,13 @@
 
         /* create components */
         ;(['r', 'g', 'b', 'a']).forEach(function(c) {
-          /* create component */
+          /* create components */
           this[c] = new SVG['Func' + c.toUpperCase()]('identity');
 
-          /* store component in set */
+          /* store components in set */
           this.rgb.add(this[c]);
 
-          /* add component node */
+          /* add components node */
           this.node.appendChild(this[c].node);
         }.bind(this)); //lost context in foreach
 

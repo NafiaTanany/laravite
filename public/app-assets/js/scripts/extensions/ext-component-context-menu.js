@@ -1,5 +1,5 @@
 /*=========================================================================================
-    File Name: ext-component-context-menu.js
+    File Name: ext-components-context-menu.js
     Description: Context Menu
     --------------------------------------------------------------------------------------
     Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template

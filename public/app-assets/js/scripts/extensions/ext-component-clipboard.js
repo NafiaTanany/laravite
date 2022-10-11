@@ -1,5 +1,5 @@
 /*=========================================================================================
-    File Name: ext-component-clipboard.js
+    File Name: ext-components-clipboard.js
     Description: Copy to clipboard
     --------------------------------------------------------------------------------------
     Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template

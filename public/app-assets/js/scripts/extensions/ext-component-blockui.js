@@ -1,5 +1,5 @@
 /*=========================================================================================
-    File Name: ext-component-blockui.js
+    File Name: ext-components-blockui.js
     Description: BlockUI
     --------------------------------------------------------------------------------------
     Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template

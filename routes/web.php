@@ -15,5 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
      return view('welcome');
-    //return view('layout.app');
+});
+Route::group(['prefix' => 'users'], function () {
+    Route::get('/', 'UsersController@index')->name('users');
+    Route::get('/data', 'UsersController@data');
+    Route::get('/create', 'UsersController@create')->name('users.create');
+    Route::get('{user}/edit', 'UsersController@edit');
+    Route::post('/', 'UsersController@store');
+    Route::delete('{user}/delete', 'UsersController@delete');
 });

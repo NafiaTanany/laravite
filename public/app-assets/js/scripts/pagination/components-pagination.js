@@ -1,6 +1,6 @@
 /*=========================================================================================
     File Name: pagination.js
-    Description: Provide pagination links for your site or app with the multi-page pagination component.
+    Description: Provide pagination links for your site or app with the multi-page pagination components.
     ----------------------------------------------------------------------------------------
     Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
     Author: Pixinvent

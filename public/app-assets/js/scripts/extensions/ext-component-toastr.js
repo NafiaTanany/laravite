@@ -1,5 +1,5 @@
 /*=========================================================================================
-	File Name: ext-component-toastr.js
+	File Name: ext-components-toastr.js
 	Description: Toastr notifications
 	----------------------------------------------------------------------------------------
 	Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template

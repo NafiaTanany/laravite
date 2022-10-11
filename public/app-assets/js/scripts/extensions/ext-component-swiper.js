@@ -1,5 +1,5 @@
 /*=========================================================================================
-    File Name: ext-component-swiper.js
+    File Name: ext-components-swiper.js
     Description: swiper plugin
     ----------------------------------------------------------------------------------------
     Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template

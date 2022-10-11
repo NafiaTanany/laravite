@@ -1,5 +1,5 @@
 /*=========================================================================================
-    File Name: ext-component-media-player.js
+    File Name: ext-components-media-player.js
     Description: Media Plyr Extenstion
     --------------------------------------------------------------------------------------
     Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
