@@ -35,13 +35,14 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'id' => 'nullable|exists:users,id',
-            'name' => 'required',
-            'email' => 'required',
-            'mobile' => 'required',
-
-        ]);
+        dd($request->all());
+//        $request->validate([
+//            'id' => 'nullable|exists:users,id',
+//            'name' => 'required',
+//            'email' => 'required',
+//            'mobile' => 'required',
+//
+//        ]);
 
         $user = new User();
         if($request->id) {

@@ -17,10 +17,10 @@ Route::get('/', function () {
      return view('welcome');
 });
 Route::group(['prefix' => 'users'], function () {
-    Route::get('/', 'UsersController@index')->name('users');
-    Route::get('/data', 'UsersController@data');
-    Route::get('/create', 'UsersController@create')->name('users.create');
-    Route::get('{user}/edit', 'UsersController@edit');
-    Route::post('/', 'UsersController@store');
-    Route::delete('{user}/delete', 'UsersController@delete');
+    Route::get('/', [\App\Http\Controllers\UsersController::class, 'index'])->name('users');
+    Route::get('/data', [\App\Http\Controllers\UsersController::class, 'data']);
+    Route::get('/create', [\App\Http\Controllers\UsersController::class,'create'])->name('users.create');
+    Route::get('{user}/edit', [\App\Http\Controllers\UsersController::class,'edit']);
+    Route::post('/store', [\App\Http\Controllers\UsersController::class,'store']);
+    Route::delete('{user}/delete', [\App\Http\Controllers\UsersController::class,'delete']);
 });
