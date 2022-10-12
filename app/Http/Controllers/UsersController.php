@@ -75,6 +75,8 @@ class UsersController extends Controller
         $user->mobile = $request->mobile;
         $user->save();
         $message = 'تمت العملية بنجاح';
+
+
         return response()->json(compact('message'));
     }
 

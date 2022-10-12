@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-     return view('welcome');
+     return redirect(\route('users'));
 });
 Route::group(['prefix' => 'users'], function () {
     Route::get('/', [\App\Http\Controllers\UsersController::class,'index'])->name('users');

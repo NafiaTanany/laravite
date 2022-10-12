@@ -1,4 +1,5 @@
 <script >
+import swal from 'sweetalert2'
 export default {
     data(){
         return{
@@ -7,13 +8,14 @@ export default {
             email:'',
             mobile:'',
             password:'',
+            validation: '',
+
         };
     },
 
     methods:{
 
         save() {
-            console.log('hi');
             axios.post('/users', {
                 id: this.id,
                 name: this.name,
@@ -21,13 +23,27 @@ export default {
                 password: this.password,
                 email: this.email,
             }).then(response => {
-
+                swal.fire({
+                    title: response.data.message,
+                    icon: "success",
+                    type: "success",
+                    timer: 2000,
+                    buttons: false,
+                });
+                location.href='/users'
             }).catch(error => {
+                this.validation = error.response.data.errors;
 
+                // swal.fire({
+                //     title: error.response.data.message,
+                //     icon: "error",
+                //     type: "error",
+                //     timer: 2000,
+                //     buttons: false,
+                // });
             });
         },
         reset() {
-            console.log('hiiiiiiiiiiiiiiiiiii');
             this.name='';
             this.email='';
             this.password='';
@@ -55,6 +71,9 @@ export default {
                                 </div>
                                 <div class="col-sm-9">
                                     <input type="text" id="first-name" class="form-control" v-model="name" placeholder="First Name">
+                                    <span class="form-control-feedback" style="color: red" v-if="validation && validation.name">
+                                          {{ validation.name[0] }}
+                                        </span>
                                 </div>
                             </div>
                         </div>
@@ -65,6 +84,9 @@ export default {
                                 </div>
                                 <div class="col-sm-9">
                                     <input type="email" id="email-id" class="form-control" v-model="email" placeholder="Email">
+                                    <span class="form-control-feedback" style="color: red" v-if="validation && validation.email">
+                                          {{ validation.email[0] }}
+                                        </span>
                                 </div>
                             </div>
                         </div>
@@ -75,6 +97,9 @@ export default {
                                 </div>
                                 <div class="col-sm-9">
                                     <input type="number" id="contact-info" class="form-control" v-model="mobile" placeholder="Mobile">
+                                    <span class="form-control-feedback" style="color: red" v-if="validation && validation.mobile">
+                                          {{ validation.mobile[0] }}
+                                        </span>
                                 </div>
                             </div>
                         </div>
@@ -85,13 +110,16 @@ export default {
                                 </div>
                                 <div class="col-sm-9">
                                     <input type="password" id="password" class="form-control" v-model="password" placeholder="Password">
+                                    <span class="form-control-feedback" style="color: red" v-if="validation && validation.password">
+                                          {{ validation.password[0] }}
+                                        </span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-sm-9 offset-sm-3">
                             <button class="btn btn-primary me-1 waves-effect waves-float waves-light" @click="save()">Submit</button>
-                            <button  class="btn btn-outline-secondary waves-effect" @click="reset()">Reset</button>
+                            <a  href="/users" class="btn btn-outline-secondary waves-effect" @click="reset()">Reset</a>
                         </div>
                     </div>
                 </div>
