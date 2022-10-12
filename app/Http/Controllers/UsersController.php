@@ -14,7 +14,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        return view('index');
     }
 
     /**
@@ -26,7 +26,29 @@ class UsersController extends Controller
     {
         return view('welcome');
     }
+    public function data()
+    {
+        $users = new User();
 
+        if(request()->has('filter')) {
+            $filter = request('filter');
+            $users = $users->where(function($query) use($filter){
+                $query->where('name', 'LIKE', "%$filter%")
+                    ->orWhere('email', 'LIKE', "%$filter%")
+                    ->orWhere('mobile', 'LIKE', "%$filter%");
+            });
+        }
+        if(request()->has('sort')) {
+            $sort = json_decode(request('sort'), true);
+            $fieldName = $sort['fieldName'] && strlen($sort['fieldName']) ? $sort['fieldName'] : 'id';
+            $order = $sort['order'] && strlen($sort['order']) ? $sort['order'] : 'desc';
+            $users = $users->orderBy($fieldName, $order);
+        }
+
+        $users = $users->paginate(10);
+
+        return response()->json(compact('users'));
+    }
     /**
      * Store a newly created resource in storage.
      *
