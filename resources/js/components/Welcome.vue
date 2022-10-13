@@ -12,7 +12,9 @@ export default {
 
         };
     },
-
+    props:{
+      user:Object
+    },
     methods:{
 
         save() {
@@ -51,7 +53,14 @@ export default {
         }
 
     },
-
+    mounted() {
+        if(this.user){
+            this.id=this.user.id
+            this.name=this.user.name
+            this.email=this.user.email
+            this.mobile=this.user.mobile
+        }
+    },
 };
 </script>
 <template>

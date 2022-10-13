@@ -45,7 +45,7 @@ export default {
                         <tr role="row">
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="2" style="width: 98px;" aria-label="Name: activate to sort column ascending">الاسم</th>
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="7" style="width: 103px;" aria-label="Email: activate to sort column ascending">البريد الالكتروني</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="2" style="width: 91px;" aria-label="Date: activate to sort column ascending">رقم الجوال</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="7" style="width: 91px;" aria-label="Date: activate to sort column ascending">الاجراءات</th>
                         </tr>
                         </thead>
                             <tbody>
@@ -53,6 +53,12 @@ export default {
                                 <td valign="top" colspan="2" class="dataTables_empty">{{user.name}}</td>
                                 <td valign="top" colspan="7" class="dataTables_empty">{{user.email}}</td>
                                 <td valign="top" colspan="2" class="dataTables_empty">{{user.mobile}}</td>
+                                <td valign="top" colspan="2" class="dataTables_empty">{{user.mobile}}</td>
+                                <td valign="top" colspan="7" class="dataTables_empty">
+                                    <a :href="`/users/${user.id}/edit`" class="btn btn-primary me-1 waves-effect waves-float waves-light " title="تعديل" >
+                                   تعديل
+                                    </a>
+                                </td>
                             </tr>
                             </tbody>
                     </table>
