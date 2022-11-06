@@ -55,6 +55,9 @@ export default {
                                 <td valign="top" colspan="2" class="dataTables_empty">{{user.mobile}}</td>
                                 <td valign="top" colspan="2" class="dataTables_empty">{{user.mobile}}</td>
                                 <td valign="top" colspan="7" class="dataTables_empty">
+                                    <a :href="`/users/${user.id}/delete`" class="btn btn-danger me-1 waves-effect waves-float waves-light " title="تعديل" >
+                                   حذف
+                                    </a>
                                     <a :href="`/users/${user.id}/edit`" class="btn btn-primary me-1 waves-effect waves-float waves-light " title="تعديل" >
                                    تعديل
                                     </a>
