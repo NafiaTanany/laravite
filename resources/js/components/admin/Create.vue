@@ -32,7 +32,7 @@ export default {
                     timer: 2000,
                     buttons: false,
                 });
-                location.href='/users'
+                location.href='/admins'
             }).catch(error => {
                 this.validation = error.response.data.errors;
 
@@ -68,7 +68,7 @@ export default {
     <div class="col-md-6 col-12" >
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">User Form</h4>
+                <h4 class="card-title">Admin Form</h4>
             </div>
             <div class="card-body">
                 <div class="form form-horizontal">
@@ -76,7 +76,7 @@ export default {
                         <div class="col-12">
                             <div class="mb-1 row">
                                 <div class="col-sm-3">
-                                    <label class="col-form-label" for="first-name">Name</label>
+                                    <label class="col-form-label" for="first-name">fullName</label>
                                 </div>
                                 <div class="col-sm-9">
                                     <input type="text" id="first-name" class="form-control" v-model="name" placeholder="First Name">

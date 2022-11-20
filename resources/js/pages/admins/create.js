@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
-import Welcome from '@/components/Welcome.vue'
+import create from '@/components/admin/Create.vue'
 const app = createApp({});
-app.component('welcome', Welcome);
+app.component('create', create);
 app.mount('#app');
 
