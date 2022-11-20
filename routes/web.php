@@ -24,3 +24,11 @@ Route::group(['prefix' => 'users'], function () {
     Route::post('/',  [\App\Http\Controllers\UsersController::class,'store']);
     Route::delete('{user}/delete',  [\App\Http\Controllers\UsersController::class,'delete']);
 });
+Route::group(['prefix' => 'admins'], function () {
+    Route::get('/', [\App\Http\Controllers\AdminsController::class,'index'])->name('admins');
+    Route::get('/data', [\App\Http\Controllers\AdminsController::class,'data']);
+    Route::get('/create', [\App\Http\Controllers\AdminsController::class,'create'])->name('admins.create');
+    Route::get('{user}/edit',  [\App\Http\Controllers\AdminsController::class,'edit']);
+    Route::post('/',  [\App\Http\Controllers\AdminsController::class,'store']);
+    Route::delete('{user}/delete',  [\App\Http\Controllers\AdminsController::class,'delete']);
+});
