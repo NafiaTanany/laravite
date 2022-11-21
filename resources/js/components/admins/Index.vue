@@ -28,7 +28,7 @@ export default {
                     <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         <div class="card-header border-bottom p-1">
                         <div class="head-label">
-                            <h6 class="mb-0">الأدمن</h6>
+                            <h6 class="mb-0">المدراء</h6>
                         </div>
                             <div class="dt-action-buttons text-right">
                             <div class="dt-buttons d-inline-flex">
