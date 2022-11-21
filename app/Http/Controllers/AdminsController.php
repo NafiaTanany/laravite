@@ -15,7 +15,7 @@ class AdminsController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        return view('admins.index');
     }
     public function data()
     {
@@ -47,7 +47,7 @@ class AdminsController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        return view('admins.create');
 
     }
 
@@ -84,7 +84,7 @@ class AdminsController extends Controller
     public function edit($id)
     {
         $user=Admin::find($id);
-        return view('admin.create',compact('user'));
+        return view('admins.create',compact('user'));
     }
 
     /**

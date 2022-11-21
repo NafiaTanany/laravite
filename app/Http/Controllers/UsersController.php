@@ -13,7 +13,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('users.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('welcome');
+        return view('users.create');
     }
     public function data()
     {
@@ -99,7 +99,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user=User::find($id);
-        return view('welcome',compact('user'));
+        return view('users.create',compact('user'));
     }
 
     /**

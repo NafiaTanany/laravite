@@ -128,7 +128,7 @@ export default {
 
                         <div class="col-sm-9 offset-sm-3">
                             <button class="btn btn-primary me-1 waves-effect waves-float waves-light" @click="save()">Submit</button>
-                            <a  href="/users" class="btn btn-outline-secondary waves-effect" @click="reset()">Reset</a>
+                            <a  href="/admins" class="btn btn-outline-secondary waves-effect" @click="reset()">Reset</a>
                         </div>
                     </div>
                 </div>
